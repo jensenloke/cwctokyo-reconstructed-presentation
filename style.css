@@ -1,0 +1,283 @@
+:root {
+  --paper: #fbfaf7;
+  --ink: #1f1f1d;
+  --muted: #666158;
+  --line: #ded7ca;
+  --panel: #fffdf8;
+  --band: #f2ede4;
+  --accent: #7a4b2b;
+  --blue: #315f86;
+  --green: #2e6f58;
+  --red: #9d3a31;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header {
+  padding: 42px min(7vw, 72px) 30px;
+  background: var(--band);
+  border-bottom: 1px solid var(--line);
+}
+
+main {
+  max-width: 1180px;
+  padding: 30px min(7vw, 72px) 70px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 14px;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 64px);
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  font-size: 21px;
+  color: var(--accent);
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul, ol {
+  margin: 8px 0 0;
+  padding-left: 24px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  color: var(--blue);
+}
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .94em;
+}
+
+pre {
+  overflow-x: auto;
+  margin: 12px 0 0;
+  padding: 15px;
+  background: #262421;
+  color: #f8f2e8;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  background: var(--panel);
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  background: var(--band);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.pill {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note {
+  border-left: 4px solid var(--green);
+  background: #eef5f1;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 18px 0 28px;
+}
+
+.card,
+.slide,
+figure {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card h3,
+.slide h3 {
+  margin-top: 0;
+}
+
+.slide {
+  margin: 14px 0;
+}
+
+.source {
+  color: var(--muted);
+  font-size: 13px;
+  margin: -4px 0 10px;
+}
+
+.callout {
+  border-left: 4px solid var(--accent);
+  background: #f7f1e8;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 16px;
+}
+
+.bad {
+  border-color: #e0b7b2;
+}
+
+.good {
+  border-color: #b9d5c4;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background: #2859c9;
+  color: white;
+  font-weight: 700;
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.source-originals {
+  margin-top: 16px;
+}
+
+.source-originals::before {
+  content: "Original image";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #eee;
+  cursor: zoom-in;
+}
+
+figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(18, 16, 14, .88);
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: min(96vw, 1800px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+  cursor: zoom-out;
+}
+
+.lightbox-caption {
+  position: fixed;
+  left: 28px;
+  right: 28px;
+  bottom: 18px;
+  color: #f8f2e8;
+  text-align: center;
+  font-size: 14px;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  color: white;
+  width: 42px;
+  height: 42px;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
