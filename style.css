@@ -322,6 +322,7 @@ figcaption {
 }
 
 .primary-action,
+.secondary-action,
 .open-link {
   display: inline-flex;
   align-items: center;
@@ -333,10 +334,23 @@ figcaption {
 }
 
 .primary-action {
-  margin-top: 10px;
   padding: 0 18px;
   background: var(--ink);
   color: white;
+}
+
+.secondary-action {
+  padding: 0 16px;
+  border: 1px solid rgba(31, 31, 29, .18);
+  background: rgba(255, 255, 255, .42);
+  color: var(--ink);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .hero-preview {
@@ -362,6 +376,55 @@ figcaption {
 
 .index-page main {
   max-width: 1240px;
+}
+
+.context-panel {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin: 0 0 30px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.context-panel h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.context-panel > p {
+  margin: 0;
+  color: #4f4a43;
+  font-size: 17px;
+}
+
+.resource-links {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resource-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid #c1d2df;
+  border-radius: 8px;
+  background: #eef4f8;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.resource-links a::after {
+  content: ">";
+  margin-left: 10px;
 }
 
 .library-intro {
@@ -483,6 +546,7 @@ figcaption {
 
 @media (max-width: 920px) {
   .site-hero,
+  .context-panel,
   .session-list,
   .session-card,
   .session-card.wide {
@@ -508,6 +572,10 @@ figcaption {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+
+  .resource-links {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -526,6 +594,14 @@ figcaption {
 
   .library-intro {
     display: block;
+  }
+
+  .hero-actions,
+  .primary-action,
+  .secondary-action,
+  .resource-links,
+  .resource-links a {
+    width: 100%;
   }
 
   .session-card > img {
