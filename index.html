@@ -3,57 +3,125 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CWC Tokyo Reconstructed Presentations V3</title>
+    <title>CWC Tokyo Reconstructed Presentations</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <header>
-      <h1>CWC Tokyo Reconstructed Presentations V3</h1>
-      <p>Step-by-step rebuild. Workshop 1 is the first completed page.</p>
-      <div class="meta">
-        <span class="pill">Workshop 1</span>
-        <span class="pill">IMG_7391 to IMG_7408</span>
-        <span class="pill">Founder stage</span>
+  <body class="index-page">
+    <header class="site-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Code with Claude Tokyo</p>
+        <h1>Reconstructed workshop presentations</h1>
+        <p class="hero-lede">Browse the rebuilt HTML versions of the workshop and founder-stage sessions. Each page includes the reconstructed content plus the original source photos underneath each section.</p>
+        <a class="primary-action" href="#presentations">Browse presentations</a>
+      </div>
+      <div class="hero-preview" aria-hidden="true">
+        <img src="assets/photos/IMG_7391.jpg" alt="">
+        <img src="assets/photos/IMG_7435.jpg" alt="">
+        <img src="assets/photos/IMG_7475.jpg" alt="">
       </div>
     </header>
+
     <main>
-      <div class="grid">
-        <section class="card">
-          <h3>How We Claude Code</h3>
-          <p>Content slides rebuilt as HTML, with demo slides isolated. The verification-contract demo from IMG_7403 and IMG_7404 is extracted as A/B/C content.</p>
-          <p><a href="how-we-claude-code.html">Open workshop 1</a></p>
-        </section>
-        <section class="card">
-          <h3>Ship Your First Managed Agent</h3>
-          <p>Workshop 2 rebuilt from IMG_7411 to IMG_7423. Content slides are recreated as HTML; IMG_7416 is kept as the single expandable demo screenshot and IMG_7415 is omitted.</p>
-          <p><a href="ship-your-first-managed-agent.html">Open workshop 2</a></p>
-        </section>
-        <section class="card">
-          <h3>The 1% Problem</h3>
-          <p>Founder-stage talk rebuilt from IMG_7424 to IMG_7430. The visible tables, lessons, and demo output are reconstructed as HTML with the original images appended underneath each slide.</p>
-          <p><a href="the-1-percent-problem.html">Open founder-stage talk</a></p>
-        </section>
-        <section class="card">
-          <h3>Agents That Remember</h3>
-          <p>Workshop rebuilt from IMG_7435 to IMG_7448. The memory-store, no-memory baseline, Console inspection, and Dreaming slides are reconstructed with source images appended under every section.</p>
-          <p><a href="agents-that-remember.html">Open workshop 3</a></p>
-        </section>
-        <section class="card">
-          <h3>Evals For Taste</h3>
-          <p>Workshop rebuilt from IMG_7451 to IMG_7459. The eval definitions, benchmark categories, lifecycle loop, and grader types are reconstructed with every source image appended underneath.</p>
-          <p><a href="evals-for-taste.html">Open workshop 4</a></p>
-        </section>
-        <section class="card">
-          <h3>Tool, Skill, Or Subagent?</h3>
-          <p>Workshop rebuilt from the available photos in IMG_7462 and IMG_7469 to IMG_7474. The decomposition framework, final agent shape, and eval results are reconstructed with source images appended.</p>
-          <p><a href="tool-skill-or-subagent.html">Open workshop 5</a></p>
-        </section>
-        <section class="card">
-          <h3>Rewriting Bun In Rust</h3>
-          <p>Founder-stage talk rebuilt from IMG_7475 to IMG_7490. The rewrite workflow, adversarial review loop, throughput tactics, results, and closing playbook are reconstructed with source images appended.</p>
-          <p><a href="rewriting-bun-in-rust.html">Open founder-stage talk</a></p>
-        </section>
-      </div>
+      <section class="library-intro" id="presentations">
+        <div>
+          <p class="eyebrow">Presentation library</p>
+          <h2>Open a reconstructed session</h2>
+        </div>
+        <p>Click any session card or its button to open the full presentation. Source screenshots are expandable inside each page.</p>
+      </section>
+
+      <section class="session-list" aria-label="Reconstructed presentations">
+        <a class="session-card workshop" href="how-we-claude-code.html">
+          <img src="assets/photos/IMG_7391.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Workshop</span>
+              <span>IMG_7391-7408</span>
+            </div>
+            <h3>How We Claude Code</h3>
+            <p>Content slides rebuilt as HTML, with demo slides isolated and the IMG_7403/7404 verification-contract demo extracted as A/B/C content.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card workshop" href="ship-your-first-managed-agent.html">
+          <img src="assets/photos/IMG_7411.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Workshop</span>
+              <span>IMG_7411-7423</span>
+            </div>
+            <h3>Ship Your First Managed Agent</h3>
+            <p>Managed-agent workshop reconstructed from content slides, with IMG_7416 kept as the main expandable demo screenshot.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card founder" href="the-1-percent-problem.html">
+          <img src="assets/photos/IMG_7424.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Founder stage</span>
+              <span>IMG_7424-7430</span>
+            </div>
+            <h3>The 1% Problem</h3>
+            <p>Gahee Seo's benchmark story rebuilt with the visible tables, lessons, and demo output reconstructed as HTML.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card workshop" href="agents-that-remember.html">
+          <img src="assets/photos/IMG_7435.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Workshop</span>
+              <span>IMG_7435-7448</span>
+            </div>
+            <h3>Agents That Remember</h3>
+            <p>Memory-store workflow, no-memory baseline, console inspection, and Dreaming slides reconstructed with source images appended.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card workshop" href="evals-for-taste.html">
+          <img src="assets/photos/IMG_7451.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Workshop</span>
+              <span>IMG_7451-7459</span>
+            </div>
+            <h3>Evals For Taste</h3>
+            <p>Eval definitions, benchmark categories, lifecycle loop, and grader types reconstructed from the workshop photos.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card workshop" href="tool-skill-or-subagent.html">
+          <img src="assets/photos/IMG_7469.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Workshop</span>
+              <span>IMG_7462, 7469-7474</span>
+            </div>
+            <h3>Tool, Skill, Or Subagent?</h3>
+            <p>Karan Sampath's decomposition framework, final agent shape, and eval results reconstructed from the available photos.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+
+        <a class="session-card founder wide" href="rewriting-bun-in-rust.html">
+          <img src="assets/photos/IMG_7475.jpg" alt="">
+          <div class="session-body">
+            <div class="session-meta">
+              <span>Founder stage</span>
+              <span>IMG_7475-7490</span>
+            </div>
+            <h3>Rewriting Bun In Rust</h3>
+            <p>Jarred Sumner's rewrite workflow, adversarial review loop, throughput tactics, results, and closing playbook reconstructed with all source images appended.</p>
+            <span class="open-link">Open presentation</span>
+          </div>
+        </a>
+      </section>
     </main>
   </body>
 </html>
